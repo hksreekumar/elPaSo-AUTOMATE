@@ -3,16 +3,23 @@
 Readme file contains necessary information for using and developing the code project. The contents are structured as per the following sections:
 
 		[SECTION 01 - Introduction]
-		[SECTION 02 - Usage]
-		[SECTION 03 - Software dependencies]
-		[SECTION 04 - Python library dependencies]
-		[SECTION 05 - Copyright information]
+		[SECTION 02 - Installation]
+		[SECTION 03 - Usage]
+		[SECTION 04 - Software dependencies]
+		[SECTION 05 - Python library dependencies]
+		[SECTION 06 - Copyright information]
 		
 
 ## Introduction
 
 AUTOMATE is an automated Testing framework for elPaSo developed by Institute for Acoustics, TU Braunschweig, Germany. This project is aimed at automatically testing and verifying the proper functioning of elPaSo on every commit in a CI framework. AUTOMATE performs specific tests evaluate the update for different parameters such as accuracy, performance, etc by executing different acoustic benchmarks. The results from the different tests are then reported in various forms. Depending upon the user input, the AUTOMATE compares the results obtained with benchmarked results which can be from an old elPaSo version or results from a commercial software like ABAQUS.
    
+## Installation
+
+AUTOMATE is hosted in the PyPI package registry. Installation can be done via regular pip with command:
+
+	python3 -m pip install automate --extra-index-url https://git.rz.tu-bs.de/api/v4/projects/3038/packages/pypi/simple
+
 ## Usage
 
 	 For usage, run:
@@ -38,7 +45,7 @@ AUTOMATE is an automated Testing framework for elPaSo developed by Institute for
 ## Python library dependencies
 
 	Python library dependencies: See requirements.txt
-	
+
 ## Copyright information
 
 Copyright (c) 2023. Authors listed in AUTHORS.md
