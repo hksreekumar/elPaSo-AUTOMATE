@@ -1,0 +1,29 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  elPaSo AUTOMATE - Automated testing framework for
+  validation and verification of a vibroacoustic simulation tool
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Harikrishnan K.
+    family-names: Sreekumar
+    affiliation: 'TU Braunschweig, Institute for Acoustics'
+  - given-names: Christopher
+    family-names: Blech
+    affiliation: 'TU Braunschweig, Institute for Acoustics'
+  - given-names: Sabine C.
+    family-names: Langer
+    affiliation: 'TU Braunschweig, Institute for Acoustics'
+repository-code: 'https://git.rz.tu-bs.de/akustik/elPaSo-AUTOMATE'
+keywords:
+  - automated testing
+  - acceptance testing
+  - performance testing
+  - vibroacoustics
+license: GPL-3.0
+version: 23.1.1
