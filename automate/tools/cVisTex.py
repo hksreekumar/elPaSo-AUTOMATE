@@ -31,7 +31,7 @@ from pathlib import Path
 from tikzplotlib import _save as tikz_save
 import matplotlib.pyplot as plt
 from fpdf.fpdf import *                     # for PDF generation
-from PyPDF2 import PdfFileMerger
+from PyPDF2 import PdfMerger 
 import numpy as np
 
 # Project imports
@@ -327,7 +327,7 @@ class cVisTex(cVisInterface):
         #merging reports
         temproryReports = glob.glob(output_folder + "/reports/tempReports/" + "*_m.pdf")
         temproryReports.insert(0, output_folder + "/reports/tempReports/firstPage.pdf")
-        pdf_merger = PdfFileMerger()
+        pdf_merger = PdfMerger()
         for path in temproryReports:
             pdf_merger.append(path)
         with Path(output_folder + "/reports/" + "full_report.pdf").open(mode="wb") as output_file:
