@@ -185,7 +185,7 @@ class cTestSuite(object):
             dofIndexTarget = self.systemTarget.getDofIndexListForNode(self.nodeMap[compare_node_elpaso])
             dofIndexSource = self.systemUnderTest.getDofIndexListForNode(compare_node_elpaso)
             
-            if dofIndexSource != dofIndexTarget:
+            if len(dofIndexSource) != len(dofIndexTarget):
                 # more filtering
                 if len(dofIndexTarget) == 6 and len(dofIndexSource) == 3: # known case of plate and shell mismatch
                     dofIndexTarget = dofIndexTarget[2::5]
