@@ -127,7 +127,7 @@ class cSystemElpaso(cSystemInterface):
         self.solvertime = []
         
         if parallel_type in 'mpi': # conduct mpi parallelization
-            max_threads = os.cpu_count()/2
+            max_threads = 16#os.cpu_count()/2
             iThread = 1
             while iThread <= max_threads:
                 self.mpi_processes.append(iThread)
@@ -138,7 +138,7 @@ class cSystemElpaso(cSystemInterface):
             #    self.omp_processes.append(1)
             self.thread_vector =   self.mpi_processes       
         elif parallel_type in 'omp': # conduct omp parallelization
-            max_threads = os.cpu_count()/2
+            max_threads = 16#os.cpu_count()/2
             iThread = 1
             while iThread <= max_threads:
                 self.mpi_processes.append(0)
@@ -153,7 +153,7 @@ class cSystemElpaso(cSystemInterface):
         os.mkdir(self.modelPath + config.pathSeparator + 'calculation')
         for (iMPI, iOMP) in zip(self.mpi_processes,self.omp_processes):
             case_path = self.modelPath + config.pathSeparator + 'calculation' + config.pathSeparator + 'm' + str(iMPI) + '_o' + str(iOMP)
-            environment = environment + 'export OMP_NUM_THREADS='+str(iOMP)+' && '
+            environment = 'export OMP_NUM_THREADS=' + str(iOMP)+' && '
             if parallel_type in 'omp':
                 case_execprestatement = ''
                 case_execflag = self.systemConfig["flag"] + ' ' + solverFlags["solverMsgLvl"] + ' ' + solverFlags["solverOmpThreads"] + ' ' + str(iOMP)
