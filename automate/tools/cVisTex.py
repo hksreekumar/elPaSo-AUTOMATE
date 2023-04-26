@@ -23,6 +23,7 @@
 ## Property of : Institut für Akustik, TU Braunschweig, Germany
 
 # Python imports
+import os
 import shutil
 import glob
 import subprocess
